@@ -1,2 +1,3 @@
 # euler
-Getting to grips with python by solving project euler problems
+A collection of my solutions to the Project Euler problems using Python.
+I'm fairly new to Python so there are definitely cleaner/better answers out there...
