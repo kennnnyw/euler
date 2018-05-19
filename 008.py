@@ -59,10 +59,4 @@ while begin < end:
         biggestProduct = product
     begin += 1
 
-# using string slice with x adjacent digits
-# calculate product
-# compare with current highest
-# replace if bigger
-# increment begin to get the next string slice
-# repeat until the
 print (biggestProduct)
