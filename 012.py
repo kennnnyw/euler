@@ -17,13 +17,17 @@
 #
 # What is the value of the first triangle number to have over five hundred
 # divisors?
+import math
 
 def factorize(num):
     num_factors = 0
-    for i in range(1, num/2 + 1):
+    # the highest factor that we need to check will be the square root
+    # of the number
+    for i in range(1, int(math.sqrt(num)) + 1):
         if num % i == 0:
-            num_factors += 1
-    num_factors += 1
+            num_factors += 2
+        if i * i == num:
+            num_factors -= 1
     return num_factors
 
 def find_triangle_number():
@@ -32,9 +36,8 @@ def find_triangle_number():
     tri_num = 0
     while found == False:
         tri_num += n
-
-        if factorize(tri_num) > 5:
+        if factorize(tri_num) > 500:
             return tri_num
         n += 1
-
+        
 print find_triangle_number()
